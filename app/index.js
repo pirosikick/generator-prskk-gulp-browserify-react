@@ -9,35 +9,48 @@ var PrskkGulpBrowserifyReactGenerator = yeoman.generators.Base.extend({
     this.pkg = require('../package.json');
   },
 
-  prompting: function () {
-    var done = this.async();
-
-    // Have Yeoman greet the user.
-    this.log(yosay(
-      'Welcome to the fine PrskkGulpBrowserifyReact generator!'
-    ));
-
-    var prompts = [{
-      type: 'confirm',
-      name: 'someOption',
-      message: 'Would you like to enable this option?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
-
-      done();
-    }.bind(this));
-  },
+  // prompting: function () {
+  //   var done = this.async();
+  //
+  //   // Have Yeoman greet the user.
+  //   this.log(yosay(
+  //     'Welcome to the fine PrskkGulpBrowserifyReact generator!'
+  //   ));
+  //
+  //   var prompts = [{
+  //     type: 'confirm',
+  //     name: 'someOption',
+  //     message: 'Would you like to enable this option?',
+  //     default: true
+  //   }];
+  //
+  //   this.prompt(prompts, function (props) {
+  //     this.someOption = props.someOption;
+  //
+  //     done();
+  //   }.bind(this));
+  // },
 
   writing: {
     app: function () {
       this.dest.mkdir('app');
-      this.dest.mkdir('app/templates');
+      this.src.copy('app/index.html', 'app/index.html');
+
+      this.dest.mkdir('app/scripts');
+
+      this.dest.mkdir('app/styles');
+      this.src.copy('app/styles/main.scss', 'app/styles/main.scss');
+
+      this.dest.mkdir('src');
+      this.src.copy('src/app.jsx', 'src/app.jsx');
+
+      this.dest.mkdir('src/views');
+      this.src.copy('src/views/Hello.jsx', 'src/views/Hello.jsx');
+      this.src.copy('src/views/User.jsx', 'src/views/User.jsx');
 
       this.src.copy('_package.json', 'package.json');
       this.src.copy('_bower.json', 'bower.json');
+      this.src.copy('_gulpfile.js', 'gulpfile.js');
     },
 
     projectfiles: function () {
