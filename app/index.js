@@ -48,9 +48,13 @@ var PrskkGulpBrowserifyReactGenerator = yeoman.generators.Base.extend({
       this.src.copy('src/views/Hello.jsx', 'src/views/Hello.jsx');
       this.src.copy('src/views/User.jsx', 'src/views/User.jsx');
 
+      this.dest.mkdir('tests');
+      this.src.copy('tests/Hello.jsx', 'tests/Hello.jsx');
+
       this.src.copy('_package.json', 'package.json');
       this.src.copy('_bower.json', 'bower.json');
       this.src.copy('_gulpfile.js', 'gulpfile.js');
+      this.src.copy('_karma.conf.js', 'karma.conf.js');
     },
 
     projectfiles: function () {
