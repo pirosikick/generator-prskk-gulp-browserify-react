@@ -1,6 +1,6 @@
 # generator-prskk-gulp-browserify-react [![Build Status](https://secure.travis-ci.org/pirosikick/generator-prskk-gulp-browserify-react.png?branch=master)](https://travis-ci.org/pirosikick/generator-prskk-gulp-browserify-react)
 
-> [Yeoman](http://yeoman.io) generator
+> [Yeoman](http://yeoman.io) generator that builds web application with react, gulp and browserify.
 
 
 ## Getting Started
