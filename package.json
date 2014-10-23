@@ -1,12 +1,12 @@
 {
   "name": "generator-prskk-gulp-browserify-react",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yeoman generator",
   "license": "MIT",
   "main": "app/index.js",
   "repository": "pirosikick/generator-prskk-gulp-browserify-react",
   "author": {
-    "name": "Hiroyuki ANAI",
+    "name": "pirosikick",
     "email": "pirosikick@gmail.com",
     "url": "https://github.com/pirosikick"
   },
